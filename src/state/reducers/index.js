@@ -1,6 +1,6 @@
 import { isUndefined } from 'ramda-adjunct'
 
-import { GAME_OVER, SQUARE_CLICKED } from '..'
+import { GAME_OVER, RESET_GAME, SQUARE_CLICKED } from '..'
 
 const initialState = { moves: [] }
 
@@ -13,6 +13,13 @@ function rootReducer (state = initialState, { payload = {}, type }) {
         ...state,
         winningSquares: squares,
         winningPlayer: player
+      }
+    case RESET_GAME:
+      return {
+        ...state,
+        moves: [],
+        winningSquares: [],
+        winningPlayer: ''
       }
     case SQUARE_CLICKED:
       return {

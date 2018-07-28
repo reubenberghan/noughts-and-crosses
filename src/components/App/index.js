@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { times } from 'ramda'
 
 import { Board } from '..'
-import { Square } from '../../containers'
+import { ResetButton, Square } from '../../containers'
 
 const StyledApp = styled.div`
   display: grid;
@@ -23,6 +23,7 @@ export default function App () {
       <Board>
         {times(square => <Square key={square} index={square} />, 9)}
       </Board>
+      <ResetButton />
     </StyledApp>
   )
 }

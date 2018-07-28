@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:ResetButton renders the ResetButton component with proper styles 1`] = `
+.c0 {
+  cursor: pointer;
+  height: 5vh;
+  justify-self: center;
+  width: 20vh;
+}
+
+<button
+  className="c0"
+>
+  Reset Game
+</button>
+`;

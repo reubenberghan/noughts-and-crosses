@@ -1,5 +1,5 @@
 import { initialState, rootReducer } from '.'
-import { gameOver, squareClicked } from '..'
+import { gameOver, resetGame, squareClicked } from '..'
 
 describe('state:reducers', () => {
   describe('rootReducer', () => {
@@ -43,6 +43,14 @@ describe('state:reducers', () => {
         winningSquares: [2, 4, 6],
         winningPlayer: 'x'
       })
+    })
+
+    it('resets moves to an empty array when the game is reset', () => {
+      const state = {
+        moves: [0, 1, 2, 3, 4]
+      }
+
+      expect(rootReducer(state, resetGame())).toMatchObject({ moves: [] })
     })
   })
 })

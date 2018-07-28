@@ -1,5 +1,5 @@
-import { gameOver, squareClicked } from '.'
-import { GAME_OVER, SQUARE_CLICKED } from '..'
+import { gameOver, resetGame, squareClicked } from '.'
+import { GAME_OVER, RESET_GAME, SQUARE_CLICKED } from '..'
 
 describe('state:actions', () => {
   describe('gameOver', () => {
@@ -29,6 +29,12 @@ describe('state:actions', () => {
           square: 4
         }
       })
+    })
+  })
+
+  describe('resetGame', () => {
+    it('produces the correct action for clicking the reset game button', () => {
+      expect(resetGame()).toMatchObject({ type: RESET_GAME })
     })
   })
 })

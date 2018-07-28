@@ -1,3 +1,4 @@
+import ResetButton from './ResetButton'
 import Square from './Square'
 
-export { Square }
+export { ResetButton, Square }
