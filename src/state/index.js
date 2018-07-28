@@ -1,11 +1,11 @@
 import { gameOver, squareClicked } from './actions'
 import { GAME_OVER, SQUARE_CLICKED } from './constants'
+import { checkForWinEpic } from './epics'
 import { initialState, rootReducer } from './reducers'
 import { getMoves, getWinningPlayer, getWinningSquares } from './selectors'
-import configureStore from './store'
 
 export {
-  configureStore,
+  checkForWinEpic,
   GAME_OVER,
   gameOver,
   getMoves,
